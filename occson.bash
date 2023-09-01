@@ -11,8 +11,8 @@ ensure_command_exist() {
 ensure_command_exist "curl"
 ensure_command_exist "openssl"
 
-access_token=$OCCSON_ACCESS_TOKEN
-passphrase=$OCCSON_PASSPHRASE
+access_token=""
+passphrase=""
 version="0.1.0"
 
 commands_help="$(cat << EOF
@@ -40,10 +40,6 @@ Options:
         --access-token
     -p OCCSON_PASSPHRASE,            Occson passphrase
         --passphrase
-
-Configure via environment variables:
-  OCCSON_ACCESS_TOKEN
-  OCCSON_PASSPHRASE
 
 Examples:
   Download to STDOUT
@@ -161,10 +157,6 @@ Options:
         --access-token
     -p OCCSON_PASSPHRASE,            Occson passphrase
         --passphrase
-
-Configure via environment variables:
-  OCCSON_ACCESS_TOKEN
-  OCCSON_PASSPHRASE
 
 Examples:
   Run command with downloaded environment variables
