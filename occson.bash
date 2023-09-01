@@ -63,6 +63,12 @@ Examples:
 EOF
 )"
 
+if [ "$#" -ne "6" ];
+then
+  echo -e "$copy_help"
+  exit 0
+fi
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -a)
@@ -167,6 +173,12 @@ Examples:
   Version: ${version}
 EOF
 )"
+
+if [ "$#" -lt "7" ];
+then
+  echo -e "$run_help"
+  exit 0
+fi
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
