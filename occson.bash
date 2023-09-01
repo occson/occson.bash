@@ -120,9 +120,9 @@ then
 
   if [[ $destination == "-" ]];
   then
-    echo $decrypted_content
+    echo "$decrypted_content"
   else
-    echo $decrypted_content >> $destination
+    echo "$decrypted_content" >> $destination
   fi
 
 else
